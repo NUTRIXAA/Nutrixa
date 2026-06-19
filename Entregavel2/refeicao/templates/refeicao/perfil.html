@@ -17,8 +17,10 @@
 
     <div class="card perfil-card">
         <div class="perfil-info">
-            <img src="https://via.placeholder.com/80" alt="Foto Perfil">
-            <div>
+            
+            <img src="{static/img/perfil.png}" alt="Perfil" class="profile-avatar">            
+            
+        <div>
                 <h3>Maxsuel Bruno</h3>
                 <p>maxsuel@email.com</p>
                 <button>Editar Perfil</button>
@@ -50,6 +52,10 @@
         </div>
     </div>
 
+    <a href="{% url 'login' %}" class="btn-primary">
+        Sair da Conta
+    </a>
+
 </div>
 
 <div class="bottom-nav">
@@ -59,7 +65,7 @@
         <span>Início</span>
     </a>
 
-    <a href="{% url 'planejamento' %}" class="nav-item">
+    <a href="{% url 'plsemanal' %}" class="nav-item">
         <div class="nav-icon">📅</div>
         <span>Plano</span>
     </a>

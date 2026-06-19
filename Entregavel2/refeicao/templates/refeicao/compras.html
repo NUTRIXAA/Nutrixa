@@ -5,47 +5,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planejamento Semanal</title>
+    <title>Lista de Compras - NutriXa</title>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
 
     <div class="top-bar">
-        <button class="back-btn">←</button>
-        <h3>Planejamento Semanal</h3>
+        <h2>🛒 Lista de Compras</h2>
     </div>
 
     <div class="green-card">
-        Média Calorias: 1.850 kcal
+        <h3>Total da Lista</h3>
+        <p>8 itens cadastrados</p>
     </div>
 
-    <table class="weekly-table">
+    <div class="meal-item">
+        <div class="meal-info">
+            <h4>Arroz Integral</h4>
+            <p>2 pacotes</p>
+        </div>
+    </div>
 
-        <thead>
-            <tr>
-                <th>Dia</th>
-                <th>Café</th>
-                <th>Almoço</th>
-                <th>Kcal</th>
-            </tr>
-        </thead>
+    <div class="meal-item">
+        <div class="meal-info">
+            <h4>Feijão</h4>
+            <p>1 pacote</p>
+        </div>
+    </div>
 
-        <tbody>
-            <tr>
-                <td>Segunda</td>
-                <td>Pão com Ovo</td>
-                <td>Arroz e Frango</td>
-                <td>1750</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="meal-item">
+        <div class="meal-info">
+            <h4>Peito de Frango</h4>
+            <p>1 kg</p>
+        </div>
+    </div>
+
+    <div class="meal-item">
+        <div class="meal-info">
+            <h4>Banana</h4>
+            <p>12 unidades</p>
+        </div>
+    </div>
+
+    <div class="meal-item">
+        <div class="meal-info">
+            <h4>Leite</h4>
+            <p>2 litros</p>
+        </div>
+    </div>
+
+    <button class="btn-primary">
+        + Adicionar Item
+    </button>
 
     <div class="bottom-nav">
 
         <a href="{% url 'home' %}" class="nav-item">
             <div class="nav-icon">🏠</div>
-            <span>Início</span>    
+            <span>Início</span>
         </a>
 
         <a href="{% url 'plsemanal' %}" class="nav-item">

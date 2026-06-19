@@ -9,14 +9,14 @@ def login(request):
 def cadastro(request):
     return render(request, 'refeicao/cadastro.html')
 
-def planejamento(request):
-    return render(request, 'refeicao/planejamento.html')
+def plsemanal(request):
+    return render(request, 'refeicao/plsemanal.html')
 
-def detalhes(request):
-    return render(request, 'refeicao/detalhes.html')
+def dtrefeicao(request):
+    return render(request, 'refeicao/dtrefeicao.html')
 
-def cadastro_refeicao(request):
-    return render(request, 'refeicao/cadastro_refeicao.html')
+def cadrefeicao(request):
+    return render(request, 'refeicao/cadrefeicao.html')
 
 def compras(request):
     return render(request, 'refeicao/compras.html')

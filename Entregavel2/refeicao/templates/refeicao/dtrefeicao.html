@@ -8,6 +8,8 @@
 </head>
 <body>
     
+    <img src="{% static 'img/pratoDeAlmoço.png' %}" alt="Refeição" class="meal-image">
+
     <div class="top-bar">
         <button class="back-btn">←</button>
         <h3>Detalhes da Refeição</h3>
@@ -30,8 +32,33 @@
         </div>
 
     </div>
+    
+    
+    <div class="bottom-nav">
+
+        <a href="{% url 'home' %}" class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <span>Início</span>
+        </a>
+
+        <a href="{% url 'planejamento' %}" class="nav-item">
+            <div class="nav-icon">📅</div>
+            <span>Plano</span>
+        </a>
+
+        <a href="{% url 'compras' %}" class="nav-item">
+            <div class="nav-icon">🛒</div>
+            <span>Compras</span>
+        </a>
+
+        <a href="{% url 'perfil' %}" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <span>Perfil</span>
+        </a>
+
+    </div>
 
     <script src="{% static 'js/script.js' %}"></script>
-    
+
 </body>
 </html>

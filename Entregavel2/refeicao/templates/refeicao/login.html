@@ -30,10 +30,14 @@
         <input type="password" placeholder="******">
     </div>
 
-    <button class="btn-primary">Entrar</button>
+    <a href="{% url 'home' %}" class="btn-primary">
+        Entrar
+    </a>
 
-    <a href="#" class="link-text">Criar conta</a>
-
+    <a href="{% url 'cadastro' %}" class="link-text">
+        Criar Conta
+    </a>
+    
     <script src="{% static 'js/script.js' %}"></script>
 
 </body>

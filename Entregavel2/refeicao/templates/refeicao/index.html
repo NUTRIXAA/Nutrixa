@@ -9,7 +9,9 @@
 <body>
     
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-    
+     
+    </img src="{% static 'img/slOgan NUTRIXA.png' %}" alt="NutriXa" class="logo-img">
+
         <div>
             <h3>Olá, Max!</h3>
             <p>Quarta-feira, 24 de junho</p>   
@@ -55,13 +57,12 @@
     </div>
 
     <div class="bottom-nav">
-
         <a href="{% url 'home' %}" class="nav-item">
             <div class="nav-icon">🏠</div>
             <span>Início</span>
         </a>
  
-        <a href="{% url 'planejamento' %}" class="nav-item">
+        <a href="{% url 'plsemanal' %}" class="nav-item">
             <div class="nav-icon">📅</div>
             <span>Plano</span> 
         </a>
