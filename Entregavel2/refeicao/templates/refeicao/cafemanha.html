@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    ...
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+      <div class="top-bar">
+
+    <a href="{% url 'home' %}" class="back-btn">
+        ←
+    </a>
+
+
+    <div class="header">← DETALHES DAS REFEIÇÕES</div>
+
+<!-- CAFÉ DA MANHÃ -->
+
+<div class="meal-card">
+
+    <div class="meal-card-content">
+
+        <div class="meal-card-img">
+            Imagem
+        </div>
+
+        <div class="meal-card-text">
+            <h3>Cafe da Manha</h3>
+            <p>Arroz, feijão, frango e salada</p>
+
+            <a class="edit-btn">Editar</a>
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="section-title">Refeição</div>
+    <div>Pão, Ovos e Fruta</div>
+
+ <div class="nutri-card">
+
+    <div class="nutri-content">
+
+        <div class="progress-circle">
+            62%
+        </div>
+
+        <div class="macros">
+
+            <div>
+                <strong>Proteínas</strong><br>
+                45g
+            </div>
+
+            <div>
+                <strong>Carbo</strong><br>
+                60g
+            </div>
+
+            <div>
+                <strong>Gordura</strong><br>
+                18g
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    
+    <div class="section-title">Ingredientes</div>
+    <div class="row"><span>Pão (2 un)</span><span>160 kcal</span></div>
+    <div class="row"><span>Ovos (2 un)</span><span>140 kcal</span></div>
+    <div class="row"><span>Banana</span><span>90 kcal</span></div>
+
+    <div class="section-title">Modo de Preparo</div>
+    <div>1. Prepare os ovos.<br>2. Torre o pão.<br>3. Sirva com a fruta.</div>
+
+</div>
+
+   
+<div class="bottom-nav">
+
+       
+    <a href="{% url 'home' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Início</span>
+    
+    </a>
+
+
+    
+    <a href="{% url 'plsemanal' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Plano</span>
+    
+    </a>
+
+
+    
+    <a href="{% url 'compras' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Compras</span>
+    
+    </a>
+
+    
+    <a href="{% url 'perfil' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Perfil</span>
+    
+        </a>
+
+    
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

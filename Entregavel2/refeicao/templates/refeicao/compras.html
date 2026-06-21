@@ -13,78 +13,114 @@
 <body>
 
     <div class="top-bar">
-        <h2>🛒 Lista de Compras</h2>
+        <h2>Lista de Compras</h2>
     </div>
 
     <div class="green-card">
         <h3>Total da Lista</h3>
+        <h2>R$ 82,50</h2>
         <p>8 itens cadastrados</p>
     </div>
 
-    <div class="meal-item">
-        <div class="meal-info">
-            <h4>Arroz Integral</h4>
-            <p>2 pacotes</p>
-        </div>
+    <h3>Adicionar Produto</h3>
+
+    <div class="form-group">
+        <label>Produto</label>
+        <input type="text" placeholder="Ex: Arroz Integral">
     </div>
 
-    <div class="meal-item">
-        <div class="meal-info">
-            <h4>Feijão</h4>
-            <p>1 pacote</p>
-        </div>
-    </div>
-
-    <div class="meal-item">
-        <div class="meal-info">
-            <h4>Peito de Frango</h4>
-            <p>1 kg</p>
-        </div>
-    </div>
-
-    <div class="meal-item">
-        <div class="meal-info">
-            <h4>Banana</h4>
-            <p>12 unidades</p>
-        </div>
-    </div>
-
-    <div class="meal-item">
-        <div class="meal-info">
-            <h4>Leite</h4>
-            <p>2 litros</p>
-        </div>
+    <div class="form-group">
+        <label>Preço</label>
+        <input type="number" placeholder="0,00">
     </div>
 
     <button class="btn-primary">
-        + Adicionar Item
+        Adicionar à Lista
     </button>
 
-    <div class="bottom-nav">
+    <h3 style="margin-top:25px;">Minha Lista</h3>
 
-        <a href="{% url 'home' %}" class="nav-item">
-            <div class="nav-icon">🏠</div>
-            <span>Início</span>
-        </a>
-
-        <a href="{% url 'plsemanal' %}" class="nav-item">
-            <div class="nav-icon">📅</div>
-            <span>Plano</span>
-        </a>
-
-        <a href="{% url 'compras' %}" class="nav-item">
-            <div class="nav-icon">🛒</div>
-            <span>Compras</span>
-        </a>
-
-        <a href="{% url 'perfil' %}" class="nav-item">
-            <div class="nav-icon">👤</div>
-            <span>Perfil</span>
-        </a>
-
+    <div class="shopping-item">
+        <div>
+            <strong>Arroz Integral</strong>
+            <p>2 pacotes</p>
+        </div>
+        <span>R$ 12,00</span>
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <div class="shopping-item">
+        <div>
+            <strong>Feijão</strong>
+            <p>1 pacote</p>
+        </div>
+        <span>R$ 8,00</span>
+    </div>
+
+    <div class="shopping-item">
+        <div>
+            <strong>Peito de Frango</strong>
+            <p>1 kg</p>
+        </div>
+        <span>R$ 28,00</span>
+    </div>
+
+    <div class="shopping-item">
+        <div>
+            <strong>Banana</strong>
+            <p>12 unidades</p>
+        </div>
+        <span>R$ 10,50</span>
+    </div>
+
+    <div class="shopping-item">
+        <div>
+            <strong>Leite</strong>
+            <p>2 litros</p>
+        </div>
+        <span>R$ 24,00</span>
+    </div>
+
+    
+    <div class="bottom-nav">
+
+    
+        <a href="{% url 'home' %}" class="nav-item">
+    
+            <div class="nav-icon"></div>
+    
+            <span>Início</span>
+    
+        </a>
+
+    
+        <a href="{% url 'plsemanal' %}" class="nav-item">
+    
+            <div class="nav-icon"></div>
+    
+            <span>Plano</span>
+    
+        </a>
+
+    
+        <a href="{% url 'compras' %}" class="nav-item">
+    
+            <div class="nav-icon"></div>
+    
+            <span>Compras</span>
+    
+        </a>
+
+    
+        <a href="{% url 'perfil' %}" class="nav-item">
+    
+            <div class="nav-icon"></div>
+    
+            <span>Perfil</span>
+    
+        </a>
+
+
+    </div>
 
 </body>
 </html>

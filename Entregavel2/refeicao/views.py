@@ -12,9 +12,6 @@ def cadastro(request):
 def plsemanal(request):
     return render(request, 'refeicao/plsemanal.html')
 
-def dtrefeicao(request):
-    return render(request, 'refeicao/dtrefeicao.html')
-
 def cadrefeicao(request):
     return render(request, 'refeicao/cadrefeicao.html')
 
@@ -23,3 +20,15 @@ def compras(request):
 
 def perfil(request):
     return render(request, 'refeicao/perfil.html')
+
+def almoco(request):
+    return render(request, 'refeicao/almoco.html')
+
+def cafemanha(request):
+    return render(request, 'refeicao/cafemanha.html')
+
+def lanche(request):
+    return render(request, 'refeicao/lanche.html')
+
+def jantar(request):
+    return render(request, 'refeicao/jantar.html')

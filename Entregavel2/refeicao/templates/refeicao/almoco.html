@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    ...
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <div class="top-bar">
+
+    <a href="{% url 'home' %}" class="back-btn">
+        ←
+    </a>
+
+    <h3>Detalhes da Refeição</h3>
+
+</div>
+
+<!-- ALMOÇO -->
+
+<div class="meal-card">
+
+    <div class="meal-card-content">
+
+        <div class="meal-card-img">
+            Imagem
+        </div>
+
+        <div class="meal-card-text">
+            <h3>Almoço</h3>
+            <p>Arroz, feijão, frango e salada</p>
+
+            <a class="edit-btn">Editar</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="nutri-card">
+
+    <div class="nutri-content">
+
+        <div class="progress-circle">
+            62%
+        </div>
+
+        <div class="macros">
+
+            <div>
+                <strong>Proteínas</strong><br>
+                45g
+            </div>
+
+            <div>
+                <strong>Carbo</strong><br>
+                60g
+            </div>
+
+            <div>
+                <strong>Gordura</strong><br>
+                18g
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <div class="section-title">Ingredientes</div>
+    <div class="row"><span>Arroz (150g)</span><span>195 kcal</span></div>
+    <div class="row"><span>Feijão (100g)</span><span>77 kcal</span></div>
+    <div class="row"><span>Frango (200g)</span><span>330 kcal</span></div>
+    <div class="row"><span>Salada (80g)</span><span>20 kcal</span></div>
+
+    <div class="section-title">Modo de Preparo</div>
+    <div>1. Cozinhe o arroz.<br>2. Prepare o feijão.<br>3. Grelhe o frango.<br>4. Monte o prato.</div>
+</div>
+
+    
+   
+<div class="bottom-nav">
+
+       
+    <a href="{% url 'home' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Início</span>
+    
+    </a>
+
+
+    
+    <a href="{% url 'plsemanal' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Plano</span>
+    
+    </a>
+
+
+    
+    <a href="{% url 'compras' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Compras</span>
+    
+    </a>
+
+    
+    <a href="{% url 'perfil' %}" class="nav-item">
+    
+        <div class="nav-icon"></div>
+    
+        <span>Perfil</span>
+    
+        </a>
+
+    
+    </div>
+
+    
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

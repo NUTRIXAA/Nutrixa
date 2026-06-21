@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,79 +11,118 @@
 </head>
 <body>
 
+    <div class="perfil-container">
 
-<div class="container">
 
-    <h1>Perfil</h1>
+        <div class="perfil-topo">
+            <h1>PERFIL</h1>
+            <img src="{% static 'img/slogan NUTRIXA.png' %}">
+        </div>
 
-    <div class="card perfil-card">
-        <div class="perfil-info">
-            
-            <img src="{static/img/perfil.png}" alt="Perfil" class="profile-avatar">            
-            
-        <div>
-                <h3>Maxsuel Bruno</h3>
-                <p>maxsuel@email.com</p>
-                <button>Editar Perfil</button>
+
+        <div class="green-card perfil-header">
+            <div class="perfil-user" style="display:flex; gap:12px; align-items:center;">
+                <img src="{% static 'img/perfil.png' %}"
+                alt="Usuário"
+                class="perfil-foto">
+
+
+                
+                <div>
+                    <h3>Maxsuel Bruno</h3>
+                    <p>maxsuelbruno@ifce.edu.br</p>
+
+                    <button class="btn-details">
+                        Editar Perfil
+                    </button>
+                </div>
+
             </div>
+
+            <div class="perfil-info-extra">
+                <p><strong>Membro desde:</strong> Maio/2024</p>
+                <p><strong>Meta:</strong> Perder Peso</p>
+            </div>
+
         </div>
+
+        <h3>Resumo Pessoal</h3>
+
+        <div class="resumo">
+
+            <div class="item">
+                <strong>1250 kcal</strong>
+                <span>Meta Diária</span>
+            </div>
+
+            <div class="item">
+                <strong>68 kg</strong>
+                <span>Peso Atual</span>
+            </div>
+
+            <div class="item">
+                <strong>1,75 m</strong>
+                <span>Altura</span>
+            </div>
+
+            <div class="item">
+                <strong>5 dias</strong>
+                <span>Sequência Atual</span>
+            </div>
+
+        </div>
+
+        <div class="profile-option">
+            <span>Preferências Alimentares</span>
+            <span>></span>
+        </div>
+
+        <div class="profile-option">
+            <span>Notificações</span>
+            <span>></span>
+        </div>
+
+        <div class="profile-option">
+            <span>Segurança</span>
+            <span>></span>
+        </div>
+
+        <div class="profile-option">
+            <span>Sobre o NutriXa</span>
+            <span>></span>
+        </div>
+
+        <div class="profile-option logout">            
+            <a href="{% url 'login' %}" class="link-text">
+                Sair da Conta
+            </a>
+        </div>
+
     </div>
 
-    <h3>Resumo Pessoal</h3>
+    <div class="bottom-nav">
 
-    <div class="resumo">
-        <div class="item">
-            <strong>1200kcal</strong>
-            <span>Meta Diária</span>
-        </div>
+        <a href="{% url 'home' %}" class="nav-item">
+            <div class="nav-icon"></div>
+            <span>Início</span>
+        </a>
 
-        <div class="item">
-            <strong>68kg</strong>
-            <span>Peso Atual</span>
-        </div>
+        <a href="{% url 'plsemanal' %}" class="nav-item">
+            <div class="nav-icon"></div>
+            <span>Semana</span>
+        </a>
 
-        <div class="item">
-            <strong>1.5m</strong>
-            <span>Altura</span>
-        </div>
+        <a href="{% url 'compras' %}" class="nav-item">
+            <div class="nav-icon"></div>
+            <span>Compras</span>
+        </a>
 
-         <div class="item">
-            <strong>5 dias</strong>
-            <span>Sequência Atual</span>
-        </div>
+        <a href="{% url 'perfil' %}" class="nav-item">
+            <div class="nav-icon"></div>
+            <span>Perfil</span>
+        </a>
+
     </div>
-
-    <a href="{% url 'login' %}" class="btn-primary">
-        Sair da Conta
-    </a>
-
-</div>
-
-<div class="bottom-nav">
-
-    <a href="{% url 'home' %}" class="nav-item">
-        <div class="nav-icon">🏠</div>
-        <span>Início</span>
-    </a>
-
-    <a href="{% url 'plsemanal' %}" class="nav-item">
-        <div class="nav-icon">📅</div>
-        <span>Plano</span>
-    </a>
-
-    <a href="{% url 'compras' %}" class="nav-item">
-        <div class="nav-icon">🛒</div>
-        <span>Compras</span>
-    </a>
-
-    <a href="{% url 'perfil' %}" class="nav-item">
-        <div class="nav-icon">👤</div>
-        <span>Perfil</span>
-    </a>
-
-</div>
-
-    <script src="{% static 'js/script.js' %}"></script>
 
 </body>
 </html>

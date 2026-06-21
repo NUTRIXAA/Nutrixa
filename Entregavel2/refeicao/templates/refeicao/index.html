@@ -3,81 +3,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriXa</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-     
-    </img src="{% static 'img/slOgan NUTRIXA.png' %}" alt="NutriXa" class="logo-img">
+    <div class="home-header">
 
-        <div>
-            <h3>Olá, Max!</h3>
-            <p>Quarta-feira, 24 de junho</p>   
-        </div>
     
-        <div style="width:45px;height:45px;background:#1E6F34;border-radius:50%;">
-      
+        <div class="home-left">
+    
+            <img src="{% static 'img/slogan NUTRIXA.png' %}" class="logo-img">
+    
         </div>
+
+    
+        <div class="home-center">
+    
+            <h3>Olá, Max!</h3>
+    
+            <p>Quarta-feira, 24 de junho</p>
+    
+        </div>
+
+    
+        <div class="home-right">
+    
+            <div class="avatar"></div>
+    
+        </div>
+
 
     </div>
+
 
     <div class="green-card">
-        <p>Resumo do dia</p>
 
-        <div class="progress-container">
+    <div class="card-title-row">
+        <h4>Resumo do Dia</h4>
+        <a href="{% url 'plsemanal' %}" class="btn-link">Ver Todas</a>
+    </div>
 
-            <div class="circle-progress">62%</div>
+    <div class="progress-container">
+        <div class="circle-progress">62%</div>
 
-            <div>
-                <h3>1.250 / 2.000 kcal</h3>
-                <p>750 kcal restantes</p>
-            </div>
+        <div>
+            <h3>1.250 / 2.000 kcal</h3>
+            <p>750 kcal restantes</p>
+        </div>
+    </div>
+
+    <div class="macros-grid">
+        <div>Proteínas<br>75g / 120g</div>
+        <div>Carboidratos<br>140g / 250g</div>
+        <div>Gorduras<br>35g / 60g</div>
+    </div>
+
+</div>
+
+<h4 style="margin: 20px 0 10px;">Refeições do Dia</h4>
+
+    <div class="meal-item">
+
+        <div class="meal-info">
+
+            <h4>Café da Manhã</h4>
+
+            <p>08:00 • Pão integral com ovo</p>
 
         </div>
 
-        <div class="macros-grid">
-            <div>Proteínas<br>75g / 120g</div>
-            <div>Carboidratos<br>140g / 250g</div>
-            <div>Gorduras<br>35g / 60g</div>
-        </div>
+        <a href="{% url 'cafemanha' %}" class="btn-details">
+           
+            Detalhes
+
+        </a>
 
     </div>
 
-    <h4>Refeições do dia</h4>
+
+    <div class="meal-item">
+
+        <div class="meal-info">
+
+            <h4>Almoço</h4>
+
+            <p>12:30 • Arroz, Feijão e Frango</p>
+
+        </div>
+
+
+        <a href="{% url 'almoco' %}" class="btn-details">
+            Detalhes
+
+        </a>
+
+    </div>
+
 
     <div class="meal-item">
         <div class="meal-info">
-            <h4>Café da Manhã</h4>
-            <p>08:00 • Pão integral com ovo</p>
+
+            <h4>Lanche da Tarde</h4>
+
+            <p>16:00 • Banana e Iogurte</p>
+
         </div>
 
-        <button class="btn-details">Detalhes</button>
+
+
+        <a href="{% url 'lanche' %}" class="btn-details">
+            
+            Detalhes
+
+        </a>
+
     </div>
 
+
+
+    <div class="meal-item">
+
+
+        <div class="meal-info">
+
+            <h4>Jantar</h4>
+
+            <p>19:30 • Sopa de Legumes</p>
+
+        </div>
+
+
+        <a href="{% url 'jantar' %}" class="btn-details">
+
+            Detalhes
+
+        </a>
+    </div>
+
+    
     <div class="bottom-nav">
+
+    
         <a href="{% url 'home' %}" class="nav-item">
-            <div class="nav-icon">🏠</div>
+    
+            <div class="nav-icon"></div>
+    
             <span>Início</span>
+    
         </a>
- 
+
+    
         <a href="{% url 'plsemanal' %}" class="nav-item">
-            <div class="nav-icon">📅</div>
-            <span>Plano</span> 
+    
+            <div class="nav-icon"></div>
+    
+            <span>Plano</span>
+    
         </a>
 
+    
         <a href="{% url 'compras' %}" class="nav-item">
-            <div class="nav-icon">🛒</div>
+    
+            <div class="nav-icon"></div>
+    
             <span>Compras</span>
+    
         </a>
 
+    
         <a href="{% url 'perfil' %}" class="nav-item">
-            <div class="nav-icon">👤</div>
+    
+            <div class="nav-icon"></div>
+    
             <span>Perfil</span>
+    
         </a>
+
 
     </div>
+
 
     <script src="{% static 'js/script.js' %}"></script>
 
