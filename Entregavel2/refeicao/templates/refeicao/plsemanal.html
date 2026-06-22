@@ -10,36 +10,114 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+    
     <div class="top-bar">
-        <button class="back-btn">←</button>
         <h3>Planejamento Semanal</h3>
     </div>
 
-    <div class="green-card">
-        Média Calorias: 1.850 kcal
+<div class="green-card resumo-semana">
+
+    <h3>Resumo da Semana</h3>
+
+    <div class="resumo-grid">
+
+        <div class="circle-meta">
+            <span>75%</span>
+            <small>da meta</small>
+        </div>
+
+        <div>
+            <strong>Média de Calorias</strong>
+            <p>1.850 kcal/dia</p>
+        </div>
+
+        <div>
+            <strong>Proteínas</strong>
+            <p>110g/dia</p>
+        </div>
+
+        <div>
+            <strong>Carboidratos</strong>
+            <p>140g/dia</p>
+        </div>
+
     </div>
 
-    <table class="weekly-table">
+</div>
 
-        <thead>
-            <tr>
-                <th>Dia</th>
-                <th>Café</th>
-                <th>Almoço</th>
-                <th>Kcal</th>
-            </tr>
-        </thead>
+<div class="titulo-secao">
 
-        <tbody>
-            <tr>
-                <td>Segunda</td>
-                <td>Pão com Ovo</td>
-                <td>Arroz e Frango</td>
-                <td>1750</td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Refeições da Semana</h2>
+
+    <button class="btn-details">
+        Editar
+    </button>
+
+</div>
+
+<table class="weekly-table">
+
+    <thead>
+        <tr>
+            <th>Dia</th>
+            <th>Café</th>
+            <th>Almoço</th>
+            <th>Lanche</th>
+            <th>Jantar</th>
+            <th>Kcal</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td><strong>Segunda</strong><br>22/06</td>
+            <td>Pão Integral com Ovo</td>
+            <td>Arroz, feijão, frango e salada</td>
+            <td>Iogurte com granola</td>
+            <td>Macarrão ao molho e frango</td>
+            <td>1750 kcal</td>
+        </tr>
+
+        <tr>
+            <td><strong>Terça</strong><br>23/06</td>
+            <td>Vitamina de banana</td>
+            <td>Arroz, lentilha, carne e salada</td>
+            <td>Frutas picadas</td>
+            <td>Sopa de legumes com frango</td>
+            <td>1820 kcal</td>
+        </tr>
+
+        <tr>
+            <td><strong>Quarta</strong><br>24/06</td>
+            <td>Aveia com frutas</td>
+            <td>Peixe grelhado, batata doce e salada</td>
+            <td>Mix de castanhas</td>
+            <td>Omelete com salada</td>
+            <td>1680 kcal</td>
+        </tr>
+
+        <tr>
+            <td><strong>Quinta</strong><br>25/06</td>
+            <td>Pão integral com queijo</td>
+            <td>Arroz, feijão, ovo e salada</td>
+            <td>Iogurte com frutas</td>
+            <td>Frango grelhado com legumes</td>
+            <td>1790 kcal</td>
+        </tr>
+
+        <tr>
+            <td><strong>Sexta</strong><br>26/06</td>
+            <td>Panqueca de banana</td>
+            <td>Arroz, feijão, carne e salada</td>
+            <td>Vitamina proteica</td>
+            <td>Wrap integral com frango</td>
+            <td>1870 kcal</td>
+        </tr>
+
+    </tbody>
+
+</table>
 
     <div class="bottom-nav">
 
@@ -48,7 +126,7 @@
             <span>Início</span>    
         </a>
 
-        <a href="{% url 'plsemanal' %}" class="nav-item">
+        <a href="{% url 'plsemanal' %}" class="nav-item active">
             <div class="nav-icon"></div>
             <span>Plano</span>
         </a>

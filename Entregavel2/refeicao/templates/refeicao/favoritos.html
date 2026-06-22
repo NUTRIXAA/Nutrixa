@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - NutriXa</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <div class="top-bar">
+
+    <a href="{% url 'perfil' %}" class="back-btn">
+        ←
+    </a>
+
+    <h3>Refeições Favoritas</h3>
+
+</div>
+
+{% for refeicao in refeicoes %}
+
+<div class="meal-item">
+
+    <div>
+        <h4>{{ refeicao.nome }}</h4>
+        <p>{{ refeicao.calorias }} kcal</p>
+    </div>
+
+    <a href="{% url 'desfavoritar_refeicao' refeicao.id %}"
+       class="remove-btn">
+        Remover
+    </a>
+
+</div>
+
+{% empty %}
+
+<p>Nenhuma refeição favoritada.</p>
+
+{% endfor %}
+
+</body>
+</html>

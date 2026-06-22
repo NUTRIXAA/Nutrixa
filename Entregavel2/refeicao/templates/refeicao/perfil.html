@@ -11,33 +11,22 @@
 </head>
 <body>
 
-    <div class="perfil-container">
-
-
-        <div class="perfil-topo">
+      <div class="perfil-topo">
             <h1>PERFIL</h1>
-            <img src="{% static 'img/slogan NUTRIXA.png' %}">
         </div>
 
-
+    <div class="perfil-container">
+        
         <div class="green-card perfil-header">
-            <div class="perfil-user" style="display:flex; gap:12px; align-items:center;">
-                <img src="{% static 'img/perfil.png' %}"
-                alt="Usuário"
-                class="perfil-foto">
+            <img src="{% static 'img/perfil.png' %}" class="perfil-foto">
+            
+            <div class="perfil-texto">
+                <h3>{{ user.username }}</h3>                
+                <p class="perfil-email">{{ user.email }}</p>
+            </div>
 
-
-                
-                <div>
-                    
-                    <h3>{{ user.username }}</h3>                
-                    <p>{{ user.email }}</p>
-
-                    <button class="btn-details">
-                        Editar Perfil
-                    </button>
-                </div>
-
+            <div class="perfil-acao">
+                <button class="btn-details">Editar Perfil</button>
             </div>
 
             <div class="perfil-info-extra">
@@ -46,11 +35,10 @@
             </div>
 
         </div>
-
+        
         <h3>Resumo Pessoal</h3>
-
+        
         <div class="resumo">
-
             <div class="item">
                 <strong>1250 kcal</strong>
                 <span>Meta Diária</span>
@@ -70,9 +58,8 @@
                 <strong>5 dias</strong>
                 <span>Sequência Atual</span>
             </div>
-
         </div>
-
+        
         <div class="profile-option">
             <span>Preferências Alimentares</span>
             <span>></span>
@@ -83,14 +70,50 @@
             <span>></span>
         </div>
 
-        <div class="profile-option">
-            <span>Segurança</span>
+        <a href="{% url 'favoritos' %}" class="profile-option">
+            <span>Favoritos</span>
             <span>></span>
-        </div>
+        </a>
+        
+        <button class="profile-option-btn" onclick="toggleAbout()">
+            Sobre o NutriXa
+            <span>+</span>
+        </button>
+        
+        <div id="about-text" class="about-text hidden">
+            
+            <h3>NUTRIXA - Planejador de Refeições</h3>
+            <p><strong>Colaboradores:</strong></p>
+            <ul>
+                <li>Amanda Alves</li>
+                <li>Anna Ellyca</li>
+                <li>Pedro Neto</li>
+                <li>Maxsuel Bruno</li>
+                <li>Rafaelly Lorena</li>
+            </ul>
 
-        <div class="profile-option">
-            <span>Sobre o NutriXa</span>
-            <span>></span>
+            <p><strong>Descrição do Problema:</strong></p>
+            <p>
+                Muitas pessoas enfrentam dificuldades para organizar suas refeições no dia a dia,
+                seja por falta de tempo, conhecimento nutricional ou planejamento.
+                Isso leva grande parte da sociedade a escolhas alimentares pouco saudáveis,
+                desperdício de alimentos e gastos desnecessários.
+            </p>
+
+            <p><strong>Solução Proposta:</strong></p>
+            <p>
+                A NUTRIXA é um planejador de refeições que ajuda o usuário a organizar a alimentação
+                de forma prática, saudável e eficiente. A plataforma permite criar planos de refeições
+                personalizados, sugerir receitas e auxiliar na manutenção de uma alimentação equilibrada.
+            </p>
+
+            <p><strong>Público-Alvo:</strong></p>
+            <ul>
+                <li>Pessoas que desejam melhorar a alimentação</li>
+                <li>Indivíduos com rotina corrida</li>
+                <li>Estudantes e trabalhadores que buscam praticidade</li>
+                <li>Pessoas interessadas em organização alimentar e economia doméstica</li>
+            </ul>
         </div>
 
         <div class="profile-option logout">            
@@ -110,7 +133,7 @@
 
         <a href="{% url 'plsemanal' %}" class="nav-item">
             <div class="nav-icon"></div>
-            <span>Semana</span>
+            <span>Plano</span>
         </a>
 
         <a href="{% url 'compras' %}" class="nav-item">
@@ -118,12 +141,20 @@
             <span>Compras</span>
         </a>
 
-        <a href="{% url 'perfil' %}" class="nav-item">
+        <a href="{% url 'perfil' %}" class="nav-item active">
             <div class="nav-icon"></div>
             <span>Perfil</span>
         </a>
 
     </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <script>
+    function toggleAbout() {
+        document.getElementById("about-text").classList.toggle("hidden");
+    }
+    </script>
 
 </body>
 </html>

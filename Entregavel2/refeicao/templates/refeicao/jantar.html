@@ -3,87 +3,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
-    <div class="top-bar">
+<div class="top-bar">
+    <a href="{% url 'home' %}" class="back-btn">←</a>
+    <h2>Detalhes da Refeição</h2>
+</div>
 
-    <a href="{% url 'home' %}" class="back-btn">
-        ←
+<div class="meal-header-card">
+
+    <img src="{% static 'img/jantar.png' %}"
+         alt="Jantar"
+         class="meal-header-img">
+
+    <div class="meal-header-info">
+
+        <h3>Macarrão ao molho e Frango</h3>
+
+        <p>📅 Segunda-feira, 22/06</p>
+        <p>🕒 19:30</p>
+
+        <button class="edit-btn">Editar</button>
+
+    </div>
+
+</div>
+
+<div class="nutrition-card">
+
+    <h2>Informações Nutricionais</h2>
+
+    <div class="nutrition-content">
+
+        <div class="kcal-circle">
+            <strong>520</strong>
+            <span>Kcal</span>
+            <p>26% da meta diária</p>
+        </div>
+
+        <div class="macro-item">
+            <h4>Proteínas</h4>
+            <strong>38g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Carboidratos</h4>
+            <strong>62g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Gorduras</h4>
+            <strong>14g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Fibras</h4>
+            <strong>8g</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<h2 class="section-title">Ingredientes</h2>
+
+<div class="ingredients-table">
+
+    <div class="row">
+        <span>Macarrão cozido</span>
+        <span>200g</span>
+        <span>310 kcal</span>
+    </div>
+
+    <div class="row">
+        <span>Peito de frango grelhado</span>
+        <span>120g</span>
+        <span>198 kcal</span>
+    </div>
+
+    <div class="row">
+        <span>Molho de tomate</span>
+        <span>100g</span>
+        <span>40 kcal</span>
+    </div>
+
+</div>
+
+<div class="section-title">Modo de Preparo</div>
+
+<div class="preparo-box">
+
+    <p>1. Cozinhe o macarrão em água fervente até ficar al dente.</p>
+
+    <p>2. Tempere o peito de frango com alho, sal e pimenta a gosto.</p>
+
+    <p>3. Grelhe o frango até dourar e depois corte em tiras ou cubos.</p>
+
+    <p>4. Em uma panela, refogue a cebola e o alho no azeite.</p>
+
+    <p>5. Adicione o molho de tomate e cozinhe por alguns minutos.</p>
+
+    <p>6. Misture o macarrão cozido ao molho.</p>
+
+    <p>7. Sirva o macarrão acompanhado do frango grelhado.</p>
+
+</div>
+
+<div class="actions">
+
+    <a href="{% url 'favoritar_refeicao' 3 %}" class="btn-primary">
+        Favoritar
     </a>
 
-    <h3>Detalhes da Refeição</h3>
+    <a href="{% url 'home' %}" class="btn-primary">
+        Concluir
+    </a>
 
 </div>
-
-<!-- JANTAR -->
-<div class="meal-card">
-
-    <div class="meal-card-content">
-
-        <div class="meal-card-img">
-            Imagem
-        </div>
-
-        <div class="meal-card-text">
-            <h3>Janta</h3>
-            <p>Arroz, feijão, frango e salada</p>
-
-            <a class="edit-btn">Editar</a>
-        </div>
-
-    </div>
-
-</div>
-    <div class="section-title">Refeição</div>
-    <div>Sopa, Pão e Salada</div>
-<div class="nutri-card">
-
-    <div class="nutri-content">
-
-        <div class="progress-circle">
-            62%
-        </div>
-
-        <div class="macros">
-
-            <div>
-                <strong>Proteínas</strong><br>
-                45g
-            </div>
-
-            <div>
-                <strong>Carbo</strong><br>
-                60g
-            </div>
-
-            <div>
-                <strong>Gordura</strong><br>
-                18g
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-    <div class="section-title">Ingredientes</div>
-    <div class="row"><span>Sopa</span><span>180 kcal</span></div>
-    <div class="row"><span>Pão</span><span>120 kcal</span></div>
-    <div class="row"><span>Salada</span><span>30 kcal</span></div>
-
-    <div class="section-title">Modo de Preparo</div>
-    <div>1. Aqueça a sopa.<br>2. Sirva com pão.<br>3. Monte a salada.</div>
-</div>
-
-    
    
 <div class="bottom-nav">
 
        
-    <a href="{% url 'home' %}" class="nav-item">
+    <a href="{% url 'home' %}" class="nav-item active">
     
         <div class="nav-icon"></div>
     

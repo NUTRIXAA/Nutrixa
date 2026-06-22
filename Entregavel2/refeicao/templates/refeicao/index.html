@@ -26,15 +26,15 @@
             {% else %}
             <h3>Olá!</h3>
             {% endif %}
-            <p>Quarta-feira, 24 de junho</p>
+            <p>Segunda-feira, 22 de junho</p>
     
         </div>
 
     
         <div class="home-right">
-    
-            <div class="avatar"></div>
-    
+            <img src="{% static 'img/perfil.png' %}"
+            alt="Perfil"
+            class="avatar">    
         </div>
 
 
@@ -133,7 +133,7 @@
 
             <h4>Jantar</h4>
 
-            <p>19:30 • Sopa de Legumes</p>
+            <p>19:30 • Macarrão ao molho e Frango</p>
 
         </div>
 
@@ -149,7 +149,7 @@
     <div class="bottom-nav">
 
     
-        <a href="{% url 'home' %}" class="nav-item">
+        <a href="{% url 'home' %}" class="nav-item active">
     
             <div class="nav-icon"></div>
     

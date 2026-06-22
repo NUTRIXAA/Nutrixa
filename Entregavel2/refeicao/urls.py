@@ -16,4 +16,15 @@ urlpatterns = [
     path('cafemanha/', views.cafemanha, name='cafemanha'),
     path('lanche/', views.lanche, name='lanche'),
     path('jantar/', views.jantar, name='jantar'),
+    path('favoritos/', views.favoritos, name='favoritos'),
+    path(
+    'favoritar/<int:id>/',
+    views.favoritar_refeicao,
+    name='favoritar_refeicao'
+),
+    path(
+    'desfavoritar/<int:id>/',
+    views.desfavoritar_refeicao,
+    name='desfavoritar_refeicao'
+),
 ]

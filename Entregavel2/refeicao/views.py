@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Refeicao
+from django.shortcuts import get_object_or_404
 
 def home(request):
     return render(request, 'refeicao/index.html')
@@ -64,3 +66,30 @@ def lanche(request):
 
 def jantar(request):
     return render(request, 'refeicao/jantar.html')
+
+def favoritos(request):
+    refeicoes = Refeicao.objects.filter(favorita=True)
+
+    return render(
+        request,
+        'refeicao/favoritos.html',
+        {'refeicoes': refeicoes}
+    )
+
+from django.shortcuts import redirect
+
+def favoritar_refeicao(request, id):
+    refeicao = get_object_or_404(Refeicao, id=id)
+
+    refeicao.favorita = True
+    refeicao.save()
+
+    return redirect(request.META.get('HTTP_REFERER', 'home'))
+
+def desfavoritar_refeicao(request, id):
+    refeicao = get_object_or_404(Refeicao, id=id)
+
+    refeicao.favorita = False
+    refeicao.save()
+
+    return redirect('favoritos')

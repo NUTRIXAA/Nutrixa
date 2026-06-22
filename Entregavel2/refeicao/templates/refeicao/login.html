@@ -16,7 +16,7 @@
         
         <div class="logo-area">
        
-            <div class="logo-circle"></div>
+            <div class="logo-circle">🍃</div>
        
             <div class="logo-title">NUTRIXA</div>
        
@@ -28,14 +28,21 @@
         <h2 class="title">Login</h2>
         
        <form method="POST">
-         {% csrf_token %}
+        {% csrf_token %}
 
-    
-         <input type="text" name="username" placeholder="Usuário">
-         <input type="password" name="password" placeholder="Senha">
+            <div class="form-group">
+                <label>Usuário</label>
+                <input type="text" name="username" placeholder="Usuário">
+            </div>
 
-         <button type="submit">Entrar</button>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" name="password" placeholder="Senha">
+            </div>
 
+            <button type="submit" class="btn-primary">
+                Entrar
+            </button>
         </form>
 
     

@@ -11,75 +11,68 @@
 </head>
 
 <body>
+<div class="shopping-header">
 
-    <div class="top-bar">
-        <h2>Lista de Compras</h2>
+    <h1>Lista de Compras </h1>
+
+</div>
+
+<div class="green-card total-card">
+
+    <div>
+        <p>Total da Lista</p>
+        <h2>R$ 0,00</h2>
+        <p>0 itens</p>
     </div>
 
-    <div class="green-card">
-        <h3>Total da Lista</h3>
-        <h2>R$ 82,50</h2>
-        <p>8 itens cadastrados</p>
-    </div>
-
-    <h3>Adicionar Produto</h3>
-
-    <div class="form-group">
-        <label>Produto</label>
-        <input type="text" placeholder="Ex: Arroz Integral">
-    </div>
-
-    <div class="form-group">
-        <label>Preço</label>
-        <input type="number" placeholder="0,00">
-    </div>
-
-    <button class="btn-primary">
-        Adicionar à Lista
+    <button class="btn-resumo">
+        Ver Resumo
     </button>
 
-    <h3 style="margin-top:25px;">Minha Lista</h3>
+</div>
 
-    <div class="shopping-item">
-        <div>
-            <strong>Arroz Integral</strong>
-            <p>2 pacotes</p>
+<h3>Adicionar Produto</h3>
+
+<div class="green-card add-product-card">
+
+    <div class="product-inputs">
+
+        <div class="form-group">
+            <label>Produto</label>
+            <input type="text" placeholder="Ex: Arroz Integral">
         </div>
-        <span>R$ 12,00</span>
+
+        <div class="form-group">
+            <label>Preço (R$)</label>
+            <input type="number" placeholder="Ex: 0,00">
+        </div>
+
     </div>
 
-    <div class="shopping-item">
-        <div>
-            <strong>Feijão</strong>
-            <p>1 pacote</p>
-        </div>
-        <span>R$ 8,00</span>
+    <button class="btn-add-product">
+        + Adicionar à Lista
+    </button>
+
+</div>
+
+<h3 class="lista-title">Minha Lista</h3>
+
+<div class="empty-list">
+
+    <div class="empty-icon">
+        📋
     </div>
 
-    <div class="shopping-item">
-        <div>
-            <strong>Peito de Frango</strong>
-            <p>1 kg</p>
-        </div>
-        <span>R$ 28,00</span>
-    </div>
+    <h3>Sua Lista Está Vazia</h3>
 
-    <div class="shopping-item">
-        <div>
-            <strong>Banana</strong>
-            <p>12 unidades</p>
-        </div>
-        <span>R$ 10,50</span>
-    </div>
+    <p>
+        Adicione produtos e preços acima para
+        montar sua lista de compras.
+    </p>
 
-    <div class="shopping-item">
-        <div>
-            <strong>Leite</strong>
-            <p>2 litros</p>
-        </div>
-        <span>R$ 24,00</span>
-    </div>
+</div>
 
+</div>
     
     <div class="bottom-nav">
 
@@ -102,7 +95,7 @@
         </a>
 
     
-        <a href="{% url 'compras' %}" class="nav-item">
+        <a href="{% url 'compras' %}" class="nav-item active">
     
             <div class="nav-icon"></div>
     

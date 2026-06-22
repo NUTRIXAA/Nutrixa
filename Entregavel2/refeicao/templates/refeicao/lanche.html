@@ -3,88 +3,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
-    <div class="top-bar">
+<div class="top-bar">
+    <a href="{% url 'home' %}" class="back-btn">←</a>
+    <h2>Detalhes da Refeição</h2>
+</div>
 
-    <a href="{% url 'home' %}" class="back-btn">
-        ←
+<div class="meal-header-card">
+
+    <img src="{% static 'img/lanche.png' %}"
+         alt="Lanche"
+         class="meal-header-img">
+
+    <div class="meal-header-info">
+
+        <h3>Iourgute natural com Granola e Banana</h3>
+
+        <p>📅 Segunda-feira, 22/06</p>
+        <p>🕒 16:00</p>
+
+        <button class="edit-btn">Editar</button>
+
+    </div>
+
+</div>
+
+<div class="nutrition-card">
+
+    <h2>Informações Nutricionais</h2>
+
+    <div class="nutrition-content">
+
+        <div class="kcal-circle">
+            <strong>520</strong>
+            <span>Kcal</span>
+            <p>26% da meta diária</p>
+        </div>
+
+        <div class="macro-item">
+            <h4>Proteínas</h4>
+            <strong>38g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Carboidratos</h4>
+            <strong>62g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Gorduras</h4>
+            <strong>14g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Fibras</h4>
+            <strong>8g</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<h2 class="section-title">Ingredientes</h2>
+
+<div class="ingredients-table">
+
+    <div class="ingredient-row">
+        <span>Iourgute natural</span>
+        <span>150g</span>
+        <span>100 kcal</span>
+    </div>
+
+    <div class="ingredient-row">
+        <span>Banana</span>
+        <span>2 un</span>
+        <span>90 kcal</span>
+    </div>
+
+    <div class="ingredient-row">
+        <span>Granola</span>
+        <span>20g</span>
+        <span>60 kcal</span>
+    </div>
+</div>
+
+<h2 class="section-title">Modo de Preparo</h2>
+
+<div class="preparo-box">
+
+    <p>1. Em um recipiente despeje o Iourgute.</p>
+
+    <p>2. Corte as bananas em rodelas e adicione no recipiente com o iorgute.</p>
+
+    <p>3. Adicione a granola.</p>
+
+</div>
+
+<div class="actions">
+
+    <a href="{% url 'favoritar_refeicao' 10 %}" class="btn-primary">
+        Favoritar
     </a>
 
-    <h3>Detalhes da Refeição</h3>
+    <a href="{% url 'home' %}" class="btn-primary">
+        Concluir
+    </a>
 
 </div>
-
-<div class="meal-card">
-
-    <div class="meal-card-content">
-
-        <div class="meal-card-img">
-            Imagem
-        </div>
-
-        <div class="meal-card-text">
-            <h3>Lanche</h3>
-            <p>Arroz, feijão, frango e salada</p>
-
-            <a class="edit-btn">Editar</a>
-        </div>
-
-    </div>
-
-</div>
-    <div class="section-title">Refeição</div>
-    <div>Iogurte, Granola e Fruta</div>
-
- <div class="nutri-card">
-
-    <div class="nutri-content">
-
-        <div class="progress-circle">
-            62%
-        </div>
-
-        <div class="macros">
-
-            <div>
-                <strong>Proteínas</strong><br>
-                45g
-            </div>
-
-            <div>
-                <strong>Carbo</strong><br>
-                60g
-            </div>
-
-            <div>
-                <strong>Gordura</strong><br>
-                18g
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-    <div class="section-title">Ingredientes</div>
-    <div class="row"><span>Iogurte</span><span>120 kcal</span></div>
-    <div class="row"><span>Granola</span><span>150 kcal</span></div>
-    <div class="row"><span>Fruta</span><span>80 kcal</span></div>
-
-    <div class="section-title">Modo de Preparo</div>
-    <div>1. Misture o iogurte com a granola.<br>2. Adicione a fruta.</div>
-</div>
-
-    
    
 <div class="bottom-nav">
 
        
-    <a href="{% url 'home' %}" class="nav-item">
+    <a href="{% url 'home' %}" class="nav-item active">
     
         <div class="nav-icon"></div>
     

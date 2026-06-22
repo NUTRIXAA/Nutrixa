@@ -3,91 +3,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
 <body>
+<div class="top-bar">
+    <a href="{% url 'home' %}" class="back-btn">←</a>
+    <h2>Detalhes da Refeição</h2>
+</div>
 
-      <div class="top-bar">
+<div class="meal-header-card">
 
-    <a href="{% url 'home' %}" class="back-btn">
-        ←
+    <img src="{% static 'img/paoComOvo.png' %}"
+         alt="CafeDaManha"
+         class="meal-header-img">
+
+    <div class="meal-header-info">
+
+        <h3>Pão Integral com Ovo</h3>
+
+        <p>📅 Segunda-feira, 22/06</p>
+        <p>🕒 08:00</p>
+
+        <button class="edit-btn">Editar</button>
+
+    </div>
+
+</div>
+
+<div class="nutrition-card">
+
+    <h2>Informações Nutricionais</h2>
+
+    <div class="nutrition-content">
+
+        <div class="kcal-circle">
+            <strong>520</strong>
+            <span>Kcal</span>
+            <p>26% da meta diária</p>
+        </div>
+
+        <div class="macro-item">
+            <h4>Proteínas</h4>
+            <strong>38g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Carboidratos</h4>
+            <strong>62g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Gorduras</h4>
+            <strong>14g</strong>
+        </div>
+
+        <div class="macro-item">
+            <h4>Fibras</h4>
+            <strong>8g</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<h2 class="section-title">Ingredientes</h2>
+
+<div class="ingredients-table">
+
+    <div class="ingredient-row">
+        <span>Pão Integral</span>
+        <span>2 un</span>
+        <span>140 kcal</span>
+    </div>
+
+    <div class="ingredient-row">
+        <span>Ovo</span>
+        <span>2 un</span>
+        <span>160 kcal</span>
+    </div>
+
+    <div class="ingredient-row">
+        <span>Leite</span>
+        <span>1/2 xíc</span>
+        <span>60 kcal</span>
+    </div>
+
+</div>
+
+<h2 class="section-title">Modo de Preparo</h2>
+
+<div class="preparo-box">
+
+    <p>1. Frite os ovos com leite e não pare de mexer.</p>
+
+    <p>2. Mexa até os ovos ficarem cremosos e o leite se misturar.</p>
+
+    <p>3. No prato coloque o pão e depois o ovo.</p>
+
+</div>
+
+<div class="actions">
+
+    <a href="{% url 'favoritar_refeicao' 4 %}" class="btn-primary">
+        Favoritar
     </a>
 
-
-    <div class="header">← DETALHES DAS REFEIÇÕES</div>
-
-<!-- CAFÉ DA MANHÃ -->
-
-<div class="meal-card">
-
-    <div class="meal-card-content">
-
-        <div class="meal-card-img">
-            Imagem
-        </div>
-
-        <div class="meal-card-text">
-            <h3>Cafe da Manha</h3>
-            <p>Arroz, feijão, frango e salada</p>
-
-            <a class="edit-btn">Editar</a>
-        </div>
-
-    </div>
+    <a href="{% url 'home' %}" class="btn-primary">
+        Concluir
+    </a>
 
 </div>
-
-    <div class="section-title">Refeição</div>
-    <div>Pão, Ovos e Fruta</div>
-
- <div class="nutri-card">
-
-    <div class="nutri-content">
-
-        <div class="progress-circle">
-            62%
-        </div>
-
-        <div class="macros">
-
-            <div>
-                <strong>Proteínas</strong><br>
-                45g
-            </div>
-
-            <div>
-                <strong>Carbo</strong><br>
-                60g
-            </div>
-
-            <div>
-                <strong>Gordura</strong><br>
-                18g
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-    
-    <div class="section-title">Ingredientes</div>
-    <div class="row"><span>Pão (2 un)</span><span>160 kcal</span></div>
-    <div class="row"><span>Ovos (2 un)</span><span>140 kcal</span></div>
-    <div class="row"><span>Banana</span><span>90 kcal</span></div>
-
-    <div class="section-title">Modo de Preparo</div>
-    <div>1. Prepare os ovos.<br>2. Torre o pão.<br>3. Sirva com a fruta.</div>
-
-</div>
-
    
 <div class="bottom-nav">
 
        
-    <a href="{% url 'home' %}" class="nav-item">
+    <a href="{% url 'home' %}" class="nav-item active">
     
         <div class="nav-icon"></div>
     
@@ -126,6 +157,8 @@
 
     
     </div>
+
+    
     <script src="{% static 'js/script.js' %}"></script>
 
 </body>
