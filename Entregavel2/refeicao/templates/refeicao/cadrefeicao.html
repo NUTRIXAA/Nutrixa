@@ -3,62 +3,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Refeição</title>
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
+
+<div class="container">
+
+    <!-- TOP BAR -->
     <div class="top-bar">
-        <button class="back-btn">←</button>
+        <a href="{% url 'home' %}" class="back-btn">←</a>
         <h3>Cadastrar Refeição</h3>
     </div>
-    
-    <div class="form-group">
-         <label>Tipo de Refeição</label>
-         <select>
-            <option>Almoço</option>
-            <option>Jantar</option>
-        </select>
-    </div>
-    
-    <div class="form-group">
-        <label>Nome da Refeição</label>
-        <input type="text">
-    </div>
-    
-    <div class="form-group">
-        <label>Modo de Preparo</label>
-        <textarea></textarea>
-    </div>
-    
-    <button class="btn-primary">
-        Salvar Refeição
-    </button>
-    
-    <div class="bottom-nav"> 
-        <a href="{% url 'home' %}" class="nav-item">
-            <div class="nav-icon"></div>
-            <span>Início</span>        
-        </a>
 
-        <a href="{% url 'plsemanal' %}" class="nav-item">
-            <div class="nav-icon"></div>
-            <span>Plano</span>
-        </a>
+    <!-- CARD PRINCIPAL VERDE -->
+    <div class="green-card">
 
-        <a href="{% url 'compras' %}" class="nav-item">
-            <div class="nav-icon"></div>
-            <span>Compras</span>
-        </a>
-    
-        <a href="{% url 'perfil' %}" class="nav-item">
-            <div class="nav-icon"></div>
-            <span>Perfil</span>
-        </a>
+        <div class="form-row">
+            <select>
+                <option>Almoço</option>
+                <option>Jantar</option>
+                <option>Café da manhã</option>
+            </select>
+
+            <input type="time">
+        </div>
+
+        <input type="text" placeholder="Nome da refeição">
 
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <!-- BUSCA -->
+    <div class="search-box">
+        <input type="text" placeholder="Buscar alimento...">
+    </div>
+
+    <!-- INGREDIENTES -->
+    <div class="card-white">
+        <h4>Ingredientes Adicionados</h4>
+
+        <div class="ingredient">
+            <span>Arroz integral</span>
+            <span>150g</span>
+            <span>165 kcal</span>
+        </div>
+
+        <div class="ingredient">
+            <span>Frango grelhado</span>
+            <span>120g</span>
+            <span>198 kcal</span>
+        </div>
+    </div>
+
+    <!-- RESUMO NUTRICIONAL -->
+    <div class="green-card">
+
+        <h4>Resumo Nutricional</h4>
+
+        <div class="nutrition-grid">
+            <div>520 kcal</div>
+            <div>Proteínas 38g</div>
+            <div>Carbo 62g</div>
+            <div>Gorduras 14g</div>
+        </div>
+
+    </div>
+
+    <!-- PREPARO -->
+    <div class="card-white">
+        <h4>Modo de Preparo</h4>
+        <textarea placeholder="Descreva o preparo..."></textarea>
+    </div>
+
+    <!-- BOTÕES -->
+    <div class="actions">
+        <a href="{% url 'favoritar_refeicao' 4 %}" class="btn-primary">
+            Favoritar
+        </a>
+        <button class="btn-primary">Salvar Refeição</button>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="bottom-nav">
+    <a href="{% url 'home' %}" class="nav-item">Início</a>
+    <a href="{% url 'plsemanal' %}" class="nav-item">Plano</a>
+    <a href="{% url 'compras' %}" class="nav-item">Compras</a>
+    <a href="{% url 'perfil' %}" class="nav-item">Perfil</a>
+</div>
 
 </body>
 </html>
