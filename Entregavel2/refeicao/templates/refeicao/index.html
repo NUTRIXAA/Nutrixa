@@ -21,9 +21,11 @@
 
     
         <div class="home-center">
-    
-            <h3>Olá, Max!</h3>
-    
+            {% if user.is_authenticated %}
+            <h3>Olá, {{ user.username }}!</h3>
+            {% else %}
+            <h3>Olá!</h3>
+            {% endif %}
             <p>Quarta-feira, 24 de junho</p>
     
         </div>
